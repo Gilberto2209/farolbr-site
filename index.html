@@ -141,10 +141,11 @@
   }
   .pillar:hover{transform:translateY(-4px);border-color:rgba(255,194,75,.35)}
   .pillar .tag{
+    display:block;
     font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:600;
     letter-spacing:.16em;color:var(--beam);text-transform:uppercase;
   }
-  .pillar .ic{width:42px;height:42px;margin-bottom:20px}
+  .pillar .ic{display:block;width:42px;height:42px;margin-bottom:16px}
   .pillar h3{font-size:1.28rem;font-weight:600;margin:10px 0 10px}
   .pillar p{color:var(--muted);font-size:.97rem}
 
@@ -184,6 +185,16 @@
   .download h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:700;margin-bottom:16px}
   .download p{color:var(--muted);max-width:46ch;margin:0 auto 32px;font-size:1.08rem}
   .download .hero-cta{justify-content:center}
+  .stores{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+  .store-btn{
+    display:inline-flex;align-items:center;gap:11px;
+    background:var(--panel-2);border:1px solid var(--line);border-radius:12px;
+    padding:11px 20px;opacity:.55;cursor:default;
+  }
+  .store-btn svg{flex:none}
+  .store-txt{display:flex;flex-direction:column;line-height:1.12;text-align:left}
+  .store-txt small{font-size:.66rem;color:var(--muted);letter-spacing:.03em}
+  .store-txt b{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;color:var(--ink)}
   .download .pkg{font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);margin-top:34px;line-height:1.9;max-width:none}
   #baixar{padding-top:28px;padding-bottom:32px}
   #como{padding-bottom:36px}
@@ -292,11 +303,7 @@
       <h1>Alertas de segurança da sua região, <span class="lit">em tempo real.</span></h1>
       <p class="lead">O Farol BR reúne relatos da comunidade num mapa vivo. Veja o que está acontecendo por perto e acione ajuda com um toque.</p>
       <div class="hero-cta">
-        <a href="#baixar" class="btn btn-primary">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Baixar para Android
-        </a>
-        <a href="#como" class="btn btn-ghost">Como funciona</a>
+        <a href="#como" class="btn btn-primary">Como funciona</a>
       </div>
       <p class="hero-note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="var(--verde)" stroke-width="2" stroke-linejoin="round"/></svg> <b>Anônimo para os outros.</b>&nbsp;Seus relatos nunca mostram seu nome ou telefone.</p>
     </div>
@@ -342,7 +349,7 @@
         <svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke="var(--beam)" stroke-width="1.8" stroke-linecap="round"/></svg>
         <span class="tag">Dados</span>
         <h3>O retrato oficial</h3>
-        <p>Estatísticas públicas de criminalidade por município, vindas do SINESP. Dados oficiais do SINESP (Sistema Nacional de Informações de Segurança Pública). Os números têm data de referência própria e podem não refletir o exato momento.</p>
+        <p>Dados oficiais do SINESP (Sistema Nacional de Informações de Segurança Pública). Os números têm data de referência própria e podem não refletir o exato momento.</p>
       </div>
       <div class="pillar largo">
         <svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M15.5 16.5l-2 2a12 12 0 01-8-8l2-2L6 4H3a2 2 0 00-2 2 18 18 0 0018 18 2 2 0 002-2v-3l-4.5-1.5z" stroke="var(--beam)" stroke-width="1.6" stroke-linejoin="round"/></svg>
@@ -400,17 +407,19 @@
 <section class="block" id="baixar">
   <div class="wrap">
     <div class="download">
-      <span class="eyebrow" style="justify-content:center">Disponível para Android</span>
+      <span class="eyebrow" style="justify-content:center">Em breve nas lojas</span>
       <h2>Acenda o Farol na sua região.</h2>
       <p>Baixe o app, ative os alertas da sua área e faça parte da rede que mantém a vizinhança informada.</p>
-      <div class="hero-cta">
-        <a href="https://github.com/Gilberto2209/farolbr-site/releases/download/v1.0.0/farol-br.apk" class="btn btn-primary" id="download-btn" download>
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Baixar APK (Android)
-        </a>
-        <a href="#recursos" class="btn btn-ghost">Ver recursos</a>
+      <div class="stores">
+        <span class="store-btn" role="link" aria-disabled="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#3DDC84"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24c-1.43-.65-3.03-1.01-4.71-1.01s-3.28.36-4.71 1.01L5.09 5.66c-.18-.28-.54-.37-.83-.22-.3.16-.42.54-.26.85L5.84 9.48C2.79 11.13.9 14.09.9 17.4h22.2c0-3.31-1.89-6.27-4.5-7.92zM7 15.25c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm10 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+          <span class="store-txt"><small>Em breve disponível</small><b>Google Play</b></span>
+        </span>
+        <span class="store-btn" role="link" aria-disabled="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#EAEEF5"><path d="M17.05 12.04c-.03-2.65 2.16-3.92 2.26-3.98-1.23-1.8-3.15-2.05-3.83-2.08-1.63-.16-3.18.96-4.01.96-.82 0-2.1-.94-3.45-.91-1.78.03-3.42 1.03-4.33 2.62-1.85 3.21-.47 7.96 1.33 10.56.88 1.27 1.93 2.7 3.31 2.65 1.33-.05 1.83-.86 3.44-.86 1.6 0 2.06.86 3.46.83 1.43-.02 2.34-1.3 3.21-2.58 1.01-1.48 1.43-2.91 1.45-2.99-.03-.01-2.79-1.07-2.82-4.25zM14.53 3.94c.73-.89 1.22-2.12 1.09-3.35-1.05.04-2.32.7-3.07 1.58-.67.78-1.26 2.03-1.1 3.23 1.17.09 2.36-.59 3.08-1.46z"/></svg>
+          <span class="store-txt"><small>Em breve disponível</small><b>App Store</b></span>
+        </span>
       </div>
-      <p class="pkg">Pacote <code>br.app.farolbr</code><br>Em breve na Google Play e App Store</p>
     </div>
   </div>
 </section>
