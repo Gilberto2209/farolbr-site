@@ -258,6 +258,9 @@
   .priv-overlay ul{margin:12px 0 12px 4px;padding:0;list-style:none}
   .priv-overlay li{color:#CBD3E0;padding:5px 0 5px 22px;position:relative;line-height:1.7}
   .priv-overlay li::before{content:"";position:absolute;left:2px;top:14px;width:6px;height:6px;border-radius:50%;background:var(--verde)}
+  .priv-overlay ol{margin:12px 0 12px 4px;padding:0;list-style:none;counter-reset:passo}
+  .priv-overlay ol li{counter-increment:passo;padding-left:28px}
+  .priv-overlay ol li::before{content:counter(passo) ".";top:5px;left:2px;width:auto;height:auto;border-radius:0;background:none;color:var(--verde);font-weight:700}
   .priv-overlay strong{color:var(--ink);font-weight:600}
   .priv-overlay a{color:var(--beam-soft)}
   .priv-overlay .callout{background:linear-gradient(120deg,rgba(0,168,90,.08),rgba(255,194,75,.05));border:1px solid var(--line);border-left:3px solid var(--beam);border-radius:12px;padding:18px 20px;margin:16px 0}
@@ -470,7 +473,7 @@
   <div class="wrap">
     <span class="eyebrow">Farol BR</span>
     <h1>Política de Privacidade</h1>
-    <p class="updated">Última atualização: 23 de novembro de 2026</p>
+    <p class="updated">Última atualização: 26 de novembro de 2026</p>
 
     <h2><span class="n">1</span> Quem somos</h2>
     <p>O Farol BR é um aplicativo de segurança pública colaborativa que permite aos usuários visualizar e reportar ocorrências de segurança em suas regiões, além de acessar contatos de emergência.</p>
@@ -516,25 +519,35 @@
       <li>Solicitar a exclusão dos seus dados</li>
       <li>Obter informações sobre com quem compartilhamos seus dados</li>
     </ul>
-    <p>Para exercer esses direitos, entre em contato: <a href="mailto:contato@farolbr.app.br">contato@farolbr.app.br</a></p>
+    <p>Para exercer esses direitos, entre em contato: <a href="mailto:contato@farolbr.app.br">contato@farolbr.app.br</a>. Para pedir a exclusão dos seus dados, siga os passos da seção 7.</p>
 
-    <h2><span class="n">7</span> Retenção de dados</h2>
+    <h2><span class="n">7</span> Como excluir seus dados</h2>
+    <p>Você pode pedir, a qualquer momento, a exclusão da sua conta no Farol BR e dos dados associados a ela. Para isso:</p>
+    <ol>
+      <li>Envie um e-mail para <a href="mailto:contato@farolbr.app.br?subject=Excluir%20meus%20dados%20-%20Farol%20BR">contato@farolbr.app.br</a> com o assunto <strong>“Excluir meus dados – Farol BR”</strong>.</li>
+      <li>Informe no e-mail o número de celular cadastrado no aplicativo.</li>
+      <li>Poderemos pedir uma confirmação para comprovar que você é o titular da conta.</li>
+      <li>Concluímos a exclusão em até 15 dias e avisamos você por e-mail.</li>
+    </ol>
+    <p><strong>O que é excluído:</strong> sua conta, o vínculo do número de celular com a conta e as sinalizações que você fez. As ocorrências que você reportou deixam de ser vinculadas a você.</p>
+    <p><strong>O que pode ser mantido, e por quanto tempo:</strong> registros de acesso e o número de telefone verificado, pelo prazo mínimo exigido pelo Marco Civil da Internet (ao menos 6 meses); dados agregados e sem identificação pessoal, por até 12 meses, para fins estatísticos e de prevenção a abusos; e dados que precisemos guardar para cumprir obrigação legal ou ordem judicial, apenas pelo tempo necessário. Os detalhes estão na seção 8.</p>
+    <h2><span class="n">8</span> Retenção de dados</h2>
     <p>As ocorrências reportadas expiram e deixam de ser exibidas no app após 48 horas.</p>
     <p>Depois de deixarem de ser exibidas, as ocorrências podem ser mantidas em nossos bancos por até 12 meses, de forma agregada e sem identificação pessoal, para fins estatísticos e de prevenção a abusos, sendo excluídas em seguida.</p>
     <p>Os registros de acesso e o número de telefone verificado são mantidos pelo prazo mínimo previsto no Marco Civil da Internet (Lei nº 12.965/2014) — ao menos 6 meses para registros de acesso a aplicações — podendo ser guardados por período maior mediante determinação legal.</p>
     
 
-    <h2><span class="n">8</span> Segurança</h2>
+    <h2><span class="n">9</span> Segurança</h2>
     <p>Adotamos medidas técnicas para proteger seus dados, incluindo regras de acesso que impedem a alteração de ocorrências por terceiros. Nenhum sistema é 100% seguro, mas trabalhamos para minimizar riscos.</p>
 
-    <h2><span class="n">9</span> Menores de idade</h2>
+    <h2><span class="n">10</span> Menores de idade</h2>
     <p>O Farol BR é destinado a pessoas com 18 anos ou mais. Não coletamos intencionalmente dados de menores de 18 anos. Caso identifiquemos que uma conta pertence a um menor de idade, poderemos removê-la e excluir os dados associados.</p>
     
 
-    <h2><span class="n">10</span> Alterações nesta política</h2>
+    <h2><span class="n">11</span> Alterações nesta política</h2>
     <p>Podemos atualizar esta política periodicamente. Mudanças significativas serão comunicadas no aplicativo.</p>
 
-    <h2><span class="n">11</span> Contato</h2>
+    <h2><span class="n">12</span> Contato</h2>
     <p>Dúvidas sobre esta política ou sobre seus dados: <a href="mailto:contato@farolbr.app.br">contato@farolbr.app.br</a><br>
     Site: <a href="#">farolbr.app.br</a></p>
   </div>
